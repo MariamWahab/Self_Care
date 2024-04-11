@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color:  #5C4033; 
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.wellness-plans {
+    margin: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+}
+
+h2{
+    font-size: 24px;
+    color: brown; 
+    margin-top: 4%;
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #e6a790; 
+    padding-bottom: 10px; 
+}
+
+input[type="text"] {
+    width: calc(100% - 140px); /* Adjusted to accommodate the buttons */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid  burlywood; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button.edit-btn,
+button.delete-btn
+ {
+    padding: 8px 20px;
+    background-color: #5C4033; /* Pink button background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-right: 10px; /* Spacing between buttons */
+}
+
+button:hover,
+button.edit-btn:hover,
+button.delete-btn:hover
+ {
+    background-color: burlywood;
+}
+
+#video{
+    margin-left: 40%;
+}
+
+section.videos{
+    background-color: transparent;
+}
+
+h3{
+    text-align: center;
+}
+
+/* .article p,a{
+    margin-left: 2%;
+
+} */
+
+
+.feedback {
+    border-left: 3px solid #333;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+/* .feedback p {
+    margin-top: 10px;
+    font-weight: bold;
+}   */
+
+footer {
+    /* background-color: #0664df;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px; */
+    background-color: #F5F5DC; /* Pink footer */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+}

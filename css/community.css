@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 40px; /* Adjust the height here */
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+    width: 10%;
+    margin-left: 20%;
+}
+
+
+.like-btn{
+    width:100px;
+}
+
+
+
+.post {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+section h2 {
+    border-bottom: 2px solid burlywood;
+}
+
+h2 {
+    color: brown;
+}
+
+.comments {
+    margin-top: 15px;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    width: calc(100% - 70px);
+}
+
+footer {
+    /* background-color: #0664df;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px; */
+    background-color: #F5F5DC; /* Pink footer */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    height: 40pt;
+    color: #5c4033;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    background-color: #5c4033;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}

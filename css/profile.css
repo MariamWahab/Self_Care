@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+}
+
+.container,.edit-view {
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 50%;
+    height: 60%;
+    margin-top: 6%;
+    padding: 8px; /* Add padding to create space around the items */
+}
+
+.image {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+}
+
+.image img {
+    max-width: 100%; /* Ensuring the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+}
+
+.profile-content h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: brown; /* Purple header text */
+}
+
+.profile-content p {
+    margin-bottom: 15px;
+    font-size: 16pt;
+    padding: 5pt;
+    border-width: 1;
+    border: #363678;
+}
+
+.profile-content .logout-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5C4033; /* Pink button background */
+    color: #fff;
+    font-weight: bold;
+    font-size: 16pt;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.profile-content .update-btn {
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5C4033; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 16pt;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.profile-content .logout-btn:hover {
+    background-color: burlywood; /* Blue button background on hover */
+}
+.profile-content .update-btn:hover {
+    background-color: burlywood; /* Blue button background on hover */
+}
+
+.profile-content .update-profile-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-content .update-profile-link a {
+    color: burlywood; /* Blue link color */
+    text-decoration: none;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar{
+    height: 40pt;
+    color: #5C4033;
+}
+
+.hidden{
+    display: none;
+}
+
+header {
+    background-color:  #5C4033; 
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+

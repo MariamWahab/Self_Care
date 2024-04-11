@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #5C4033; 
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    margin-left: 2%;
+    
+}
+.videos {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.exercise {
+    border: 0px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 15px;
+    height: 300px;
+    width: 600px;
+    margin-top: -5px;
+    margin-bottom: 50px; /* Adjust the margin-bottom value to add space between exercise buttons */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-position 0.3s;
+}
+
+.exercise:hover {
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+.exercise h2 {
+    margin-top: 0px;
+    color: brown;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+}
+.exercise .description {
+    color: burlywood;
+    margin-top: 190px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 16px;
+}
+
+section h1{
+    border-bottom: 2px solid #e6a790; 
+}
+
+footer {
+    /* background-color: #0664df;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px; */
+    background-color: #F5F5DC; /* Pink footer */
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+.logo{
+    width: 100px; 
+    height: auto;
+}
+
+.fa-arrow-left{
+    margin-top: 500px;
+}

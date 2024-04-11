@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    animation: changeBackground 18s infinite; /* Apply the animation */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    background-color: #F5F5DC; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 740px;
+    padding: 17px; /* Add padding to create space around the items */
+}
+
+.image {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+}
+
+.image img {
+    max-width: 100%; /* Ensuring the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.form {
+    flex: 1; /* Take remaining space */
+    padding: 12px;
+    position: relative;
+}
+
+.form h2 {
+    margin-bottom: 18px;
+    text-align: center;
+    color: #5C4033; /* Purple header text */
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="date"],
+.form select[name="gender"] {
+    width: 100%; /* Take full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #5C4033; /* Orange border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form button[type="submit"] {
+    width: 100%; /* Take full width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5C4033; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* .form button[type="submit"].login-btn {
+    background-color: #363678; /* Change background color for login button 
+/* } */
+
+.form button[type="submit"]:hover {
+    background-color: burlywood; /* Blue button background on hover */
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url("../assets/reading.jpg");
+    } 
+    25% {
+        background-image: url("../assets/products.webp");
+    }
+    50% {
+        background-image: url('../assets/relaxing.jpg');
+    }
+    75% {
+        background-image: url('../assets/me.jpg');
+    }
+    100% {
+        background-image: url('../assets/greenJuice.jpg');
+    }
+}
+
+#specialist{
+    width: 50%; /* Take full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #5C4033; /* Orange border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.specialist{
+    margin-top: 10%;
+}
+
+#isSpecialist{
+    margin-bottom: 4%;
+}

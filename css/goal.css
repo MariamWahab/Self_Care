@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color:  #5C4033; 
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.wellness-plans {
+    margin: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: brown;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid burlywood ;
+    padding-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="time"] {
+    width: calc(20% - 10px); /* Adjusted to accommodate the buttons */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid  burlywood; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button.edit-btn,
+button.delete-btn
+ {
+    padding: 8px 20px;
+    background-color: #5C4033; /* Pink button background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-right: 10px; /* Spacing between buttons */
+}
+
+button:hover,
+button.edit-btn:hover,
+button.delete-btn:hover
+ {
+    background-color: burlywood;
+}
+
+footer {
+    display: none; /* Initially hide the footer */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 999; /* Ensure footer is above other content */
+}
+
+/* New CSS for Progress Tracking and Analytics Section */
+
+.analytics {
+    margin-top: 50px;
+}
+
+.analytics-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.analytics h2 {
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.analytics-content p {
+    margin-bottom: 10px;
+}
+
+/* Additional CSS for task statuses */
+#goal{
+    width: 50%
+}
+
+#goals-table th {
+  display: flex;
+  justify-content:flex-start ;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#goals-table tr {
+    display: flex;
+    justify-content:space-evenly ;
+    width:700pt;
+  }
+
+  #goals-table{
+    width: 90%;
+  }
+
+  #goals-table td {
+    display: flex;
+    justify-content:space-evenly ;
+    width: 100%;
+  }
+
+#goals-table input[type="checkbox"] {
+  transform: scale(1.5); /* Increase checkbox size */
+}
+
+#goals-table input[type="text"] {
+    font-size: 16pt;
+    width: 100%;
+  }

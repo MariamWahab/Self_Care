@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 740px;
+    padding: 17px; /* Add padding to create space around the items */
+    max-width: 740px;
+    padding: 17px; /* Add padding to create space around the items */
+}
+
+.image {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+}
+
+.image img {
+    max-width: 100%; /* Ensuring the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.form {
+    flex: 1.4;
+    padding: 12px;
+    flex: 1.4;
+    padding: 12px;
+    position: relative;
+}
+
+.form-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form h2 {
+    margin-bottom: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+    color: #800080; /* Purple header text */
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="date"],
+.form select[name="gender"],
+.form select[name="interests"]  {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d65deb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form button[type="submit"] {
+
+    width: 40%;
+}
+.form button[type="submit"] {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4; /* Pink button background */
+    color: #fff;
+    font-weight: bold;
+    font-size: 14pt;
+    font-weight: bold;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-bottom: 10px;
+   
+    height: 37px;
+
+   
+    height: 37px;
+
+}
+
+.form .reg-other{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
+}
+
+.to-login{
+    display: flex;
+    align-items: center;
+}
+
+
+.form button[type="submit"]:hover {
+    background-color: #363678; /* Blue button background on hover */
+}
+.form .reg-other{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
+}
+
+.to-login{
+    display: flex;
+    align-items: center;
+}
+
+
+.form button[type="submit"]:hover {
+    background-color: #363678; /* Blue button background on hover */
+}
+
+
+.register-actions{
+    display: flex;
+    justify-content: 
+    space-between;
+}
+
+.form .forgot-password a {
+    color:  #363678; /* Blue link color */
+    text-decoration: none;
+}
+
+.register-actions{
+    display: flex;
+    justify-content: 
+    space-between;
+}
+.first-col{
+    flex: 1;
+}
+
+.second-col{
+    flex: 1;
+}

@@ -1,0 +1,46 @@
+.nav-bar{
+    height: 40pt;
+    display: flex;
+    background-color: #5C4033;
+    justify-content: space-between;
+    color: white;
+    font-size: 14pt;
+
+}
+
+.nav-bar-title{
+    display: flex;
+    align-self:center;
+    font-size: 20pt;
+    font-weight: 300;
+    padding-left: 15pt;
+}
+
+
+.nav-bar nav ul {
+    list-style-type: none;
+    padding: 0;
+    border: #e0e0e0;
+    margin-right: 20px;
+}
+
+.nav-bar nav ul li {
+    display: inline;
+    margin-right: 20px;
+    border-radius: 9%;
+    padding: 8pt;
+}
+
+.nav-bar nav ul li:hover {
+   background-color: burlywood;
+
+}
+
+.nav-bar nav ul li.active {
+    background-color: burlywood;
+}
+
+.nav-bar nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}

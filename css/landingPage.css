@@ -1,0 +1,155 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #F5F5DC; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: brown;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+nav ul li a:hover {
+    color: burlywood; /* burlywood hover color */
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add some letter spacing for emphasis */
+}
+
+h2 {
+    font-size: 24px;
+    color: brown; 
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    text-transform: uppercase; /* Convert text to uppercase */
+    border-bottom: 2px solid brown; /* Add a bottom border */
+    padding-bottom: 10px; /* Add spacing between text and border */
+}
+
+h3 {
+    color: #5C4033; 
+    margin-top: -2%;
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+p {
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+.info{
+    color: #5C4033;
+    font-size: 17px;
+    font-style: italic;
+}
+
+#methods {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.feature {
+    flex-basis: 30%; /* Adjust the width of each feature */
+    margin: 20px;
+    background-color: #fff; /* White background for features */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, background-position 0.3s;
+
+}
+.feature p {
+    position: absolute;
+    bottom: -100%; /* Initially position the paragraph outside the feature */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    transition: bottom 0.3s ease; /* Add transition for smooth animation */
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature:hover p{
+    display: block;
+    bottom: 0;
+
+}
+
+.feature h3 {
+    color: #5C4033; /*brown heading color */
+}
+
+footer {
+    background-color: #5C4033; /* brown footer */
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    bottom: 0;
+}
+
+
+
+
+.feature-img:hover {
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+a{
+    color: burlywood;
+}

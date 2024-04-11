@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color:  #5C4033; 
+    color: black;
+    /* text-align: center; */
+    padding: 15px;
+}    
+
+main {
+    padding: 20px;
+    align-content: center;
+    margin-left: 2%;
+    
+}
+
+.scrub,.moisturizer{
+    /* border: 0px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 15px;
+    height: 300px;
+    width: 600px;
+    margin-top: -5px;
+    margin-bottom: 50px; 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    cursor: pointer; */
+    margin-top: 5%;
+    margin-left: 25%;
+    transition: transform 0.3s, background-position 0.3s;
+    width: 70%;
+    height: 30%;
+}
+
+.wash, .perfume{
+    margin-top: 5%;
+    margin-left: 5%;
+    transition: transform 0.3s, background-position 0.3s;
+    width: 50%;
+    height: 25%;
+
+}
+
+
+
+
+section li{
+    margin-top: 5%;
+    font-size: 30px;
+
+}
+
+
+.perfume:hover {
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+.moisturizer:hover{
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+.wash:hover{
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+.scrub:hover{
+    transform: scale(1.05);
+    background-position: center 10%;
+}
+
+/* .BodyCare p{
+    font-size: 20pt;
+    font-family: cursive;
+    margin-left: 5%;
+
+} */
+
+
+.skin2{
+    width: 40%;
+    margin-left: 10%;
+    
+}
+
+.skin1{
+    width: 40%;
+}
+
+.facialCare img{
+    justify-content: space-around;
+    margin-bottom: 3%;
+
+}
+
+.links h1{
+    /* margin-top: 10%; */
+    color: brown;
+    padding: 10px;
+}
+
+.facialCare p{
+    margin-left: 2%;
+    font-size: 16pt;
+}
+
+/* .links p,a{
+    margin-left: 2%;
+    font-size: 16pt;
+
+} */
+
+
+
+.skin-Care h1 {
+    margin-top: 0px;
+    color: brown;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+}
+
+.facialCare h1{
+    margin-top: 2%;
+    color: brown;
+    padding: 10px;
+
+}
+
+
+section h1{
+    border-bottom: 2px solid #e6a790; 
+}
+
+footer {
+    /* background-color: #0664df;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px; */
+    background-color: #F5F5DC; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* .logo{
+    width: 100px; 
+    height: auto;
+} */
+
+/* .fa-arrow-left{
+    margin-top: 500px;
+} */
+

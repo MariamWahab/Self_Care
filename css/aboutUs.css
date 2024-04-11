@@ -1,0 +1,113 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+}
+
+header {
+    background-color: #F5F5DC; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+h1 {
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+.mission .content img {
+    max-width: 300px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    margin-left: 10%;
+}
+
+.values .content img {
+    max-width: 300px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    
+}
+
+.name{
+    color: #5C4033;
+    font-family: 'Lucida handwriting';
+}
+
+h2{
+    font-size: 24px;
+    color: brown; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #e6a790; 
+    padding-bottom: 10px; 
+}
+
+p {
+    font-size: 20px; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+ul {
+    margin-left: 10%;
+    list-style-type: circle;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+
+.feedback {
+    border-left: 3px solid #333;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.feedback p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    /* background-color: #0664df;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px; */
+    background-color: #5C4033; /* Pink footer */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
