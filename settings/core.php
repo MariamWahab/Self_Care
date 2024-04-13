@@ -14,7 +14,7 @@ function loginCheck() {
     }
 }
 
-loginCheck();
+
 
 // Function to check for user role ID session
 // function checkUserRole() {
