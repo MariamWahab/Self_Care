@@ -119,12 +119,7 @@ INSERT INTO `likes` (`LikeID`, `UserID`, `PostID`, `CommentID`) VALUES
 -- Table structure for table `requests`
 --
 
-CREATE TABLE `requests` (
-  `request_id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `specialist_id` int(11) DEFAULT NULL,
-  `date_requested` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 
@@ -167,9 +162,6 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserID`, `FirstName`, `LastName`, `Email`, `Gender`, `DateOfBirth`, `Password`, `RegistrationDate`) VALUES
-(1, 'Dr. Erica', 'Thompson', 'drerica@gmail.com', 'female', '1998-02-02', '$2y$10$DTUaUj4p6eZAzjnS1I8ow.M8ifWuY9WzAvZwozq9y8/tXDOWDORf6', '2024-04-07 22:35:25'),
-(2, 'Mariam', 'Wahab', 'mariamw605@gmail.com', 'female', '2003-08-27', '$2y$10$4ml9F7WFjk6lsPxq9G4GpObHDNcsLOlEwYuSub5LHz18htccXdT2G', '2024-04-07 22:40:09');
 
 -- Create Role Table
 CREATE TABLE Roles (
@@ -183,14 +175,7 @@ INSERT INTO Roles (RoleID, RoleName) VALUES
 (2, 'User');
 
 -- Add RoleID column to Users table
-ALTER TABLE Users
-ADD COLUMN RoleID INT,
-ADD CONSTRAINT fk_user_role FOREIGN KEY (RoleID) REFERENCES Roles(RoleID);
 
--- Add RoleID column to Specialists table
-ALTER TABLE Specialists
-ADD COLUMN RoleID INT,
-ADD CONSTRAINT fk_specialist_role FOREIGN KEY (RoleID) REFERENCES Roles(RoleID);
 
 --
 -- Indexes for dumped tables
@@ -231,18 +216,7 @@ ALTER TABLE `likes`
 --
 -- Indexes for table `requests`
 --
-ALTER TABLE `requests`
-  ADD PRIMARY KEY (`request_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `specialist_id` (`specialist_id`);
 
---
--- Indexes for table `specialists`
---
-ALTER TABLE `specialists`
-  ADD PRIMARY KEY (`SpecialistID`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -257,31 +231,29 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `communityposts`
 --
 ALTER TABLE `communityposts`
-  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `goals`
 --
 ALTER TABLE `goals`
-  MODIFY `GoalID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=412;
+  MODIFY `GoalID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `LikeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `LikeID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `requests`
---
-ALTER TABLE `requests`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT;
+
 
 --
 -- AUTO_INCREMENT for table `specialists`
@@ -292,8 +264,8 @@ ALTER TABLE `specialists`
 --
 -- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `users` MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT;
+
 
 --
 -- Constraints for dumped tables
