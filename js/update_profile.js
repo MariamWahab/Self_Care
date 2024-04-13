@@ -1,70 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Make an AJAX request to fetch interests data
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../function/get_profile_fxn.php', true); // Open the XMLHttpRequest
-    xhr.send();
-    
-    // Fetch user profile information from the server
-    fetch('../function/get_profile_fxn.php')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // Fill form fields with fetched profile information
-        document.getElementById('fname').value = data.fname;
-        document.getElementById('lname').value = data.lname;
-        document.getElementById('email').value = data.email;
-        document.getElementById('dob').value = data.dob;
-        document.getElementById('gender').value = data.gender;
-    })
-    .catch(error => console.error('Error:', error));
-
-    // Add event listener for form submission
-    document.getElementById('updateForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Collect form data
-        const formData = new FormData(this);
-      
-        // Send form data to update_profile.php using fetch
-        fetch('../action/edit_profile_action.php', {
-            method: 'POST',
-            body: formData
-        })
+    // Function to fetch user profile data
+    function fetchProfileData() {
+        // Make a fetch request to the PHP script to get user profile data
+        fetch('../function/get_profile_fxn.php')
         .then(response => {
-            if (response.ok) {
-                swal({
-                    title: 'Success!',
-                    text: 'Successfully Updated .',
-                    icon: 'success',
-                    button: 'OK'
-                }).then((value) => {
-                    if (value) {
-                        // Redirect to another page after success if needed
-                        window.location.href = '../view/profile.php';
-                    }
-                });
-                
-            } else {
-                swal({
-                    title: 'Error!',
-                    text: 'Update failed. Please try again ',
-                    icon: 'error',
-                    button: 'OK'
-                });
-                // Display error message if update fails
-                console.error('Update failed:', response.statusText);
-                // You can display a message to the user using a modal or alert
+            if (!response.ok) {
+                throw new Error('Failed to fetch user profile data');
             }
+            return response.json();
+        })
+        .then(data => {
+            // Log the fetched data to the console for debugging
+            console.log('Fetched profile data:', data);
+
+            // Fill form fields with fetched profile information
+            document.getElementById('fname').value = data.fname;
+            document.getElementById('lname').value = data.lname;
+            document.getElementById('email').value = data.email;
+            document.getElementById('dob').value = data.dob;
+            document.getElementById('gender').value = data.gender;
         })
         .catch(error => {
-            console.error('Error:', error);
-            // Handle any unexpected errors if needed
-            swal({
-                title: 'Error!',
-                text: 'An unexpected error occurred. Try again.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+            console.error('Error fetching profile data:', error);
+            // Handle error appropriately, e.g., display error message to the user
         });
+    }
+
+    // Fetch user profile information
+    fetchProfileData();
+
+    // Redirect to profile page when the update button is clicked
+    document.getElementById('updateButton').addEventListener('click', function() {
+        // Submit the form when the button is clicked
+        document.getElementById('updateForm').submit();
     });
 });

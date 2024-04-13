@@ -8,68 +8,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function likePost(postID) {
+        var formData = new FormData();
+        formData.append('postID', postID);
+
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '../action/like_action.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.status === 'success') {
-                        // Reload the page to display the updated like count
-                        location.reload();
-                    } else {
-                        // Handle error
-                        alert(response.message);
-                    }
+                    alert(xhr.responseText); // Display the response message
+                    location.reload(); // Reload the page to show updated like count
                 } else {
-                    // Handle error
                     alert('Error: ' + xhr.statusText);
                 }
             }
         };
-        xhr.send('postID=' + encodeURIComponent(postID));
+        xhr.send(formData);
     }
 
-    // Function to fetch comments for a post
-    function fetchComments(postID) {
-        var commentsContainer = document.querySelector('.comments[data-post-id="' + postID + '"]');
-        if (commentsContainer) {
-            // Fetch comments via AJAX and update the comments container
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        // Update comments container with fetched comments
-                        commentsContainer.innerHTML = xhr.responseText;
-                    } else {
-                        // Handle error
-                        alert('Error fetching comments: ' + xhr.statusText);
-                    }
-                }
-            };
-            xhr.open('GET', '../action/get_comments_action.php?postID=' + encodeURIComponent(postID), true);
-            xhr.send();
-        }
-    }
-
-    // Add event listener to each post to fetch comments when clicked
-    var posts = document.querySelectorAll('.post');
-    posts.forEach(function(post) {
-        post.addEventListener('click', function() {
-            var postID = this.getAttribute('data-post-id');
-            fetchComments(postID);
-        });
-    });
-
-    // Submit comment form via AJAX
     var commentForms = document.querySelectorAll('.comment-form');
     commentForms.forEach(function(form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
 
             var formData = new FormData(form);
-            var postID = formData.get('postID');
             var commentText = formData.get('comment-text');
 
             // Check if comment is not empty
@@ -78,22 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            // Set the action URL of the form
+            form.action = '../action/comment_action.php';
+
+            // Submit the form
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '../action/comment_action.php', true);
+            xhr.open('POST', form.action, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
-                        var response = JSON.parse(xhr.responseText);
-                        if (response.status === 'success') {
-                            // Comment added successfully, refresh the page to display it
-                            location.reload();
-                        } else {
-                            // Handle error
-                            alert(response.message);
-                        }
+                        // Comment submitted successfully, reload the page
+                        location.reload();
                     } else {
-                        // Handle error
-                        alert('Error: ' + xhr.statusText);
+                        alert('Error submitting comment: ' + xhr.statusText);
                     }
                 }
             };
