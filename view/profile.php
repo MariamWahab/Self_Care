@@ -1,7 +1,13 @@
 <?php
 include ("../settings/core.php");
 include("../settings/connection.php");
+include("../function/get_profile.fxn");
 loginCheck();
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +34,8 @@ loginCheck();
                 <ul>
                     <li class="<?php echo ($message === 'home' || $message === '') ? 'active' : ''; ?>"><a href="homePage.php?msg=profile">Home</a></li>
                     <li class="<?php echo ($message === 'goal' || $message === '') ? 'active' : ''; ?>"><a href="goal.php">Goals</a></li>
-                    <li class="<?php echo ($message === 'exercise' || $message === '') ? 'active' : ''; ?>"><a href="exercisesPageView.php?msg=relaxationExercise">Exercise</a></li>
+                    <li class="<?php echo ($message === 'skin care' || $message === '') ? 'active' : ''; ?>"><a href="skinCare.php?msg=skincare">Skin Care Corner</a></li>
+                    <li class="<?php echo ($message === 'exercise' || $message === '') ? 'active' : ''; ?>"><a href="exercise.php?msg=relaxationExercise">Exercise</a></li>
                     <li class="<?php echo ($message === 'wellnessTips' || $message === '') ? 'active' : ''; ?>"><a href="wellness.php?msg=wellnessTips"> Wellness Tips</a></li>
                     <li class="<?php echo ($message === 'community' || $message === '') ? 'active' : ''; ?>"><a href="community.php?msg=interactiveCommunity"> Community</a></li>
                     
@@ -61,6 +68,9 @@ loginCheck();
             </div>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2024 Profile. All rights reserved.</p>
+    </footer>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/profile.js"></script>
 </body>

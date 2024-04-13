@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +36,10 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : 'goal';
         <nav>
             <ul>
                 <li class="<?php echo ($message === 'home' || $message === '') ? 'active' : '';?>"><a href="homePage.php">Home</a></li>
+                <li class="<?php echo ($message === 'goal' || $message === '') ? 'active' : '';?>"><a href="goal.php">Goal</a></li>
                 <li class="<?php echo ($message === 'skinCare' || $message === '') ? 'active' : '';?>"><a href="skinCare.php?msg=skin_Care">Skin Care Corner</a></li>
                 <li class="<?php echo ($message === 'exercise' || $message === '') ? 'active' : '';?>"><a href="exercise.php?msg=exercise">Exercises</a></li>
-                <li class="<?php echo ($message === 'wellnessTips' || $message === '') ? 'active' : '';?>"><a href="wellnessTips.php?msg=wellnessTips">Wellness Tips</a></li>
-                <li class="<?php echo ($message === 'community' || $message === '') ? 'active' : '';?>"><a href="community.php?msg=interactiveCommunity">Community</a></li>
+                <li class="<?php echo ($message === 'wellnessTips' || $message === '') ? 'active' : '';?>"><a href="wellness.php?msg=wellnessTips">Wellness Tips</a></li>
                 <li class="<?php echo ($message === 'profile' || $message === '') ? 'active' : '';?>"><a href="profile.php?msg=profile">Profile</a></li>
             </ul>
         </nav>
@@ -57,10 +63,10 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : 'goal';
         // Query to fetch posts from the database
         $query = "SELECT CP.PostID, CP.PostText, CP.PostDate, U.FirstName, U.LastName, COUNT(L.LikeID) AS LikesCount,
             COUNT(C.CommentID) AS CommentsCount
-          FROM CommunityPosts CP
-          JOIN Users U ON CP.UserID = U.UserID
-          LEFT JOIN Likes L ON CP.PostID = L.PostID
-          LEFT JOIN Comments C ON CP.PostID = C.PostID
+          FROM communityposts CP
+          JOIN users U ON CP.UserID = U.UserID
+          LEFT JOIN likes L ON CP.PostID = L.PostID
+          LEFT JOIN comments C ON CP.PostID = C.PostID
           GROUP BY CP.PostID
           ORDER BY CP.PostDate DESC";
         $result = $connection->query($query);
@@ -90,8 +96,8 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : 'goal';
                 // Fetch and display comments for this post
                 $postID = $row['PostID'];
                 $commentsQuery = "SELECT C.CommentID, C.UserID, C.CommentText, C.CommentDate, U.FirstName, U.LastName 
-                                  FROM Comments C 
-                                  JOIN Users U ON C.UserID = U.UserID 
+                                  FROM comments C 
+                                  JOIN users U ON C.UserID = U.UserID 
                                   WHERE C.PostID = $postID";
                 $commentsResult = $connection->query($commentsQuery);
 

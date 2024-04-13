@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +22,7 @@
         </div>
         <div class="form">
             <h2>Profile</h2>
-            <form action="#" method="post" id="updateForm">
+            <form action="../action/edit_profile_action.php" method="post" id="updateForm">
 
                 <div class="form-content">
 
@@ -47,15 +53,15 @@
                 </div>
 
                 <div class="register-actions">
-                    <button type="submit" > Update </button>
+                    <button type="submit" class="update-btn" id="updateButton"> Update </button>
                 </div>
                 
 
             </form>
         </div>
     </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="../js/update_profile.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <!-- <script src="../js/update_profile.js"></script> -->
 
 </body>
 
