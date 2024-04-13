@@ -11,7 +11,7 @@ if (isset($_SESSION['UserID'])) {
     // Check if goal text and reminder time are provided
     if (isset($_POST['goal']) && isset($_POST['reminder'])) {
         // Prepare the SQL query with placeholders
-        $query = "INSERT INTO Goals (UserID, GoalText,ReminderTime) VALUES (?, ?, ?)";
+        $query = "INSERT INTO goals (UserID, GoalText,ReminderTime) VALUES (?, ?, ?)";
 
         // Prepare and execute the statement
         if ($stmt = mysqli_prepare($connection, $query)) {

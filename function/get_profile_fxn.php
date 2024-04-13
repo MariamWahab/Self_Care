@@ -7,7 +7,7 @@ include('../settings/core.php');
 $user_id = $_SESSION['UserID']; // Assuming 'UserID' is stored in the session
 
 // Query to get user information
-$user_sql = "SELECT * FROM Users WHERE UserID = ?";
+$user_sql = "SELECT * FROM users WHERE UserID = ?";
 $user_stmt = $connection->prepare($user_sql);
 $user_stmt->bind_param("i", $user_id);
 $user_stmt->execute();
@@ -26,7 +26,7 @@ if ($user_row = $user_result->fetch_assoc()) {
     $gender = $user_row['Gender'];
 }
 
-$user_stmt->close();
+$usera_stmt->close();
 
 // Close database connection
 $connection->close();
