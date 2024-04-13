@@ -1,4 +1,9 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +26,7 @@
       <input type="email" id="email" name="email" required>
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
-      <input type="submit" value="SIGN IN">
+      <button type="submit" id="signInButton">SIGN IN</button>
     </form>
     <div class="forgot-password">
       <a href="#">Forgot password?</a>

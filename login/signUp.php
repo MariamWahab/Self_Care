@@ -1,3 +1,10 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +22,7 @@
         </div>
         <div class="form">
             <h2>Join <span style="font-family: 'Lucida handwriting';">Restore!</span></h2>
-            <form action="../action/signUp_action.php" method="post" id="registerForm">
+            <form id="register" onsubmit="return validateForm(event)" action="../action/signUp_action.php" method="POST" >
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" required>
 
